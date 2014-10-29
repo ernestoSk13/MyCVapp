@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="UserAdditionalSection" representedClassName="UserAdditionalSection" syncable="YES">
+        <attribute name="sectionDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sectionName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserCareerObjective" representedClassName="UserCareerObjective" syncable="YES">
+        <attribute name="careerObjective" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserEducation" representedClassName="UserEducation" syncable="YES">
+        <attribute name="degree" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstMonth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstYear" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastMonth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastYear" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="majorDegree" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserInfo" representedClassName="UserInfo" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthdate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="degree" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profilePicUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zipcode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserSkills" representedClassName="UserSkills" syncable="YES">
+        <attribute name="skillExperience" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="skillName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserWorkingHistory" representedClassName="UserWorkingHistory" syncable="YES">
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstMonth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstYear" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastMonth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastYear" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="UserCareerObjective" positionX="-63" positionY="81" width="128" height="60"/>
+        <element name="UserEducation" positionX="-63" positionY="63" width="128" height="165"/>
+        <element name="UserInfo" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="UserSkills" positionX="-54" positionY="99" width="128" height="75"/>
+        <element name="UserWorkingHistory" positionX="-54" positionY="90" width="128" height="163"/>
+        <element name="UserAdditionalSection" positionX="-54" positionY="99" width="128" height="75"/>
+    </elements>
+</model>

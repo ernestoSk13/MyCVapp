@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E05E8A819CA04BF008BB417 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E05E8A719CA04BF008BB417 /* AVFoundation.framework */; };
+		0E0A375B19AE34250083F95C /* MyCVWorkingHistoryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0A375A19AE34250083F95C /* MyCVWorkingHistoryDetailsViewController.m */; };
+		0E0A375E19AE41CD0083F95C /* MyCVSkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0A375D19AE41CD0083F95C /* MyCVSkillsViewController.m */; };
+		0E0A376119AE41DC0083F95C /* MyCVSkillDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0A376019AE41DC0083F95C /* MyCVSkillDetailsViewController.m */; };
+		0E122DDC19AE42C0008C78C6 /* UserSkills.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E122DDB19AE42C0008C78C6 /* UserSkills.m */; };
+		0E122DDF19AE71E3008C78C6 /* MyCVOtherSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E122DDE19AE71E3008C78C6 /* MyCVOtherSectionViewController.m */; };
+		0E122DE219AE71EF008C78C6 /* MyCVOtherSectionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E122DE119AE71EF008C78C6 /* MyCVOtherSectionDetailsViewController.m */; };
+		0E22A3F0199E6DB4006C179A /* MyCVUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E22A3EF199E6DB4006C179A /* MyCVUtilities.m */; };
+		0E447EC71999DADA0021E775 /* UILabel+customProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E447EC61999DADA0021E775 /* UILabel+customProperties.m */; };
+		0E447ECE199B39F30021E775 /* MyCVLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E447ECD199B39F30021E775 /* MyCVLandingViewController.m */; };
+		0E47052519BA25B000126C0A /* MyCVPDFDesignOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E47052419BA25B000126C0A /* MyCVPDFDesignOptionsViewController.m */; };
+		0E47052819BA357000126C0A /* MyCVPDFPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E47052719BA357000126C0A /* MyCVPDFPreviewViewController.m */; };
+		0E4C3F2D19B78ADF008AA310 /* PDFHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C3F2C19B78ADF008AA310 /* PDFHelper.m */; };
+		0E4C3F3019B7B83B008AA310 /* MyCVPhoneFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C3F2F19B7B83B008AA310 /* MyCVPhoneFormatter.m */; };
 		0E4D0C4D1991E94F00DC70A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4D0C4C1991E94F00DC70A2 /* Foundation.framework */; };
 		0E4D0C4F1991E94F00DC70A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4D0C4E1991E94F00DC70A2 /* CoreGraphics.framework */; };
 		0E4D0C511991E94F00DC70A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4D0C501991E94F00DC70A2 /* UIKit.framework */; };
@@ -15,13 +29,45 @@
 		0E4D0C5D1991E94F00DC70A2 /* MyCVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4D0C5C1991E94F00DC70A2 /* MyCVAppDelegate.m */; };
 		0E4D0C601991E94F00DC70A2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4D0C5E1991E94F00DC70A2 /* Main_iPhone.storyboard */; };
 		0E4D0C631991E94F00DC70A2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4D0C611991E94F00DC70A2 /* Main_iPad.storyboard */; };
-		0E4D0C661991E94F00DC70A2 /* MyCVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4D0C651991E94F00DC70A2 /* MyCVViewController.m */; };
+		0E4D0C661991E94F00DC70A2 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4D0C651991E94F00DC70A2 /* MenuController.m */; };
 		0E4D0C681991E94F00DC70A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4D0C671991E94F00DC70A2 /* Images.xcassets */; };
 		0E4D0C6F1991E94F00DC70A2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4D0C6E1991E94F00DC70A2 /* XCTest.framework */; };
 		0E4D0C701991E94F00DC70A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4D0C4C1991E94F00DC70A2 /* Foundation.framework */; };
 		0E4D0C711991E94F00DC70A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4D0C501991E94F00DC70A2 /* UIKit.framework */; };
 		0E4D0C791991E94F00DC70A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E4D0C771991E94F00DC70A2 /* InfoPlist.strings */; };
 		0E4D0C7B1991E94F00DC70A2 /* MyCVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4D0C7A1991E94F00DC70A2 /* MyCVTests.m */; };
+		0E4D0C861991EDDE00DC70A2 /* MyCVHomeControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4D0C851991EDDE00DC70A2 /* MyCVHomeControllerViewController.m */; };
+		0E4D0C8A1993375000DC70A2 /* MyCVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4D0C891993375000DC70A2 /* MyCVViewController.m */; };
+		0E4D0C941993488800DC70A2 /* UIColor+customProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4D0C931993488800DC70A2 /* UIColor+customProperties.m */; };
+		0E4D0C9719934F1000DC70A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4D0C9619934F1000DC70A2 /* QuartzCore.framework */; };
+		0E6832CA19C1572E00C6E608 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6832C919C1572E00C6E608 /* iAd.framework */; };
+		0E6CF4EB19A69B3F00340707 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6CF4EA19A69B3F00340707 /* CoreLocation.framework */; };
+		0E6DFDF319BE979A0029BFA5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6DFDF219BE979A0029BFA5 /* CoreText.framework */; };
+		0E6F9EC819AF74A000B681CE /* UserAdditionalSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9EC719AF74A000B681CE /* UserAdditionalSection.m */; };
+		0E6F9ECE19AF8A7A00B681CE /* MyCVConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9ECD19AF8A7A00B681CE /* MyCVConfirmationViewController.m */; };
+		0E7FDE0819AD45AE003BD997 /* UserCareerObjective.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7FDE0719AD45AE003BD997 /* UserCareerObjective.m */; };
+		0E7FDE0B19AD45AE003BD997 /* UserWorkingHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7FDE0A19AD45AE003BD997 /* UserWorkingHistory.m */; };
+		0E95F36B19A9BD92002B4B82 /* MyCVPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95F36919A9BD92002B4B82 /* MyCVPickerViewController.m */; };
+		0E95F36C19A9BD92002B4B82 /* MyCVPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E95F36A19A9BD92002B4B82 /* MyCVPickerViewController.xib */; };
+		0E95F36F19A9C208002B4B82 /* MyCVEducationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95F36E19A9C208002B4B82 /* MyCVEducationViewController.m */; };
+		0E95F37219A9C430002B4B82 /* UserEducation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95F37119A9C430002B4B82 /* UserEducation.m */; };
+		0EA0C720199EB858005FEE9F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0C71E199EB858005FEE9F /* DataModel.xcdatamodeld */; };
+		0EA0C726199EC07E005FEE9F /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0C725199EC07E005FEE9F /* UserInfo.m */; };
+		0EA3927D19A27B9300DD0317 /* MyCVBasicInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3927C19A27B9300DD0317 /* MyCVBasicInfoViewController.m */; };
+		0EA6559A19ACE6AC00D1FF5D /* MyCVEducationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6559919ACE6AC00D1FF5D /* MyCVEducationDetailsViewController.m */; };
+		0EA6559E19AD2D5C00D1FF5D /* MyCVWorkingHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6559D19AD2D5C00D1FF5D /* MyCVWorkingHistoryViewController.m */; };
+		0EA655A119AD3C6C00D1FF5D /* MyCVCareerObjectiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA655A019AD3C6C00D1FF5D /* MyCVCareerObjectiveViewController.m */; };
+		0EAAF17219A07E8900D8F715 /* MyCVBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAAF17119A07E8900D8F715 /* MyCVBaseViewController.m */; };
+		0EB7FC1919A3F723009AE696 /* MyCVCustomDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7FC1719A3F723009AE696 /* MyCVCustomDatePickerViewController.m */; };
+		0EB7FC1A19A3F723009AE696 /* MyCVCustomDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EB7FC1819A3F723009AE696 /* MyCVCustomDatePickerViewController.xib */; };
+		0EBA973019BE352200F82780 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA972F19BE352200F82780 /* libGoogleAdMobAds.a */; };
+		0EBA973319BE3B4D00F82780 /* MyCVComingFeaturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA973219BE3B4D00F82780 /* MyCVComingFeaturesViewController.m */; };
+		0EBA973719BE40E000F82780 /* MyCVInterstitialAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA973619BE40E000F82780 /* MyCVInterstitialAppDelegate.m */; };
+		0EBA973C19BE4A2200F82780 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA973919BE4A2200F82780 /* Default-568h@2x.png */; };
+		0EBA973D19BE4A2200F82780 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA973A19BE4A2200F82780 /* Default@2x.png */; };
+		0EBA973F19BE4A5400F82780 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA973E19BE4A5400F82780 /* Default.png */; };
+		0EC523EF199DA6D7002510A2 /* UIImage+customProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC523EE199DA6D7002510A2 /* UIImage+customProperties.m */; };
+		F76BB987BF4E4F2EA51A3B59 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65CBCCDC84574E5081D578EF /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +81,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E05E8A719CA04BF008BB417 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0E0A375919AE34250083F95C /* MyCVWorkingHistoryDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVWorkingHistoryDetailsViewController.h; sourceTree = "<group>"; };
+		0E0A375A19AE34250083F95C /* MyCVWorkingHistoryDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVWorkingHistoryDetailsViewController.m; sourceTree = "<group>"; };
+		0E0A375C19AE41CD0083F95C /* MyCVSkillsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVSkillsViewController.h; sourceTree = "<group>"; };
+		0E0A375D19AE41CD0083F95C /* MyCVSkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVSkillsViewController.m; sourceTree = "<group>"; };
+		0E0A375F19AE41DC0083F95C /* MyCVSkillDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVSkillDetailsViewController.h; sourceTree = "<group>"; };
+		0E0A376019AE41DC0083F95C /* MyCVSkillDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVSkillDetailsViewController.m; sourceTree = "<group>"; };
+		0E122DDA19AE42C0008C78C6 /* UserSkills.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSkills.h; sourceTree = "<group>"; };
+		0E122DDB19AE42C0008C78C6 /* UserSkills.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSkills.m; sourceTree = "<group>"; };
+		0E122DDD19AE71E3008C78C6 /* MyCVOtherSectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVOtherSectionViewController.h; sourceTree = "<group>"; };
+		0E122DDE19AE71E3008C78C6 /* MyCVOtherSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVOtherSectionViewController.m; sourceTree = "<group>"; };
+		0E122DE019AE71EF008C78C6 /* MyCVOtherSectionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVOtherSectionDetailsViewController.h; sourceTree = "<group>"; };
+		0E122DE119AE71EF008C78C6 /* MyCVOtherSectionDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVOtherSectionDetailsViewController.m; sourceTree = "<group>"; };
+		0E22A3EE199E6DB4006C179A /* MyCVUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVUtilities.h; sourceTree = "<group>"; };
+		0E22A3EF199E6DB4006C179A /* MyCVUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVUtilities.m; sourceTree = "<group>"; };
+		0E3795BD19A3FA1D0012A62A /* MyCVPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVPicker.h; sourceTree = "<group>"; };
+		0E447EC51999DADA0021E775 /* UILabel+customProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+customProperties.h"; sourceTree = "<group>"; };
+		0E447EC61999DADA0021E775 /* UILabel+customProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+customProperties.m"; sourceTree = "<group>"; };
+		0E447ECC199B39F30021E775 /* MyCVLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVLandingViewController.h; sourceTree = "<group>"; };
+		0E447ECD199B39F30021E775 /* MyCVLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVLandingViewController.m; sourceTree = "<group>"; };
+		0E47052319BA25B000126C0A /* MyCVPDFDesignOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVPDFDesignOptionsViewController.h; sourceTree = "<group>"; };
+		0E47052419BA25B000126C0A /* MyCVPDFDesignOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVPDFDesignOptionsViewController.m; sourceTree = "<group>"; };
+		0E47052619BA357000126C0A /* MyCVPDFPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVPDFPreviewViewController.h; sourceTree = "<group>"; };
+		0E47052719BA357000126C0A /* MyCVPDFPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVPDFPreviewViewController.m; sourceTree = "<group>"; };
+		0E4C3F2B19B78ADF008AA310 /* PDFHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFHelper.h; sourceTree = "<group>"; };
+		0E4C3F2C19B78ADF008AA310 /* PDFHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFHelper.m; sourceTree = "<group>"; };
+		0E4C3F2E19B7B83B008AA310 /* MyCVPhoneFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVPhoneFormatter.h; sourceTree = "<group>"; };
+		0E4C3F2F19B7B83B008AA310 /* MyCVPhoneFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVPhoneFormatter.m; sourceTree = "<group>"; };
 		0E4D0C491991E94F00DC70A2 /* MyCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4D0C4C1991E94F00DC70A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0E4D0C4E1991E94F00DC70A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,14 +121,68 @@
 		0E4D0C5C1991E94F00DC70A2 /* MyCVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCVAppDelegate.m; sourceTree = "<group>"; };
 		0E4D0C5F1991E94F00DC70A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		0E4D0C621991E94F00DC70A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		0E4D0C641991E94F00DC70A2 /* MyCVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCVViewController.h; sourceTree = "<group>"; };
-		0E4D0C651991E94F00DC70A2 /* MyCVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCVViewController.m; sourceTree = "<group>"; };
+		0E4D0C641991E94F00DC70A2 /* MenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
+		0E4D0C651991E94F00DC70A2 /* MenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
 		0E4D0C671991E94F00DC70A2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0E4D0C6D1991E94F00DC70A2 /* MyCVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4D0C6E1991E94F00DC70A2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0E4D0C761991E94F00DC70A2 /* MyCVTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyCVTests-Info.plist"; sourceTree = "<group>"; };
 		0E4D0C781991E94F00DC70A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E4D0C7A1991E94F00DC70A2 /* MyCVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCVTests.m; sourceTree = "<group>"; };
+		0E4D0C841991EDDE00DC70A2 /* MyCVHomeControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVHomeControllerViewController.h; sourceTree = "<group>"; };
+		0E4D0C851991EDDE00DC70A2 /* MyCVHomeControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVHomeControllerViewController.m; sourceTree = "<group>"; };
+		0E4D0C881993375000DC70A2 /* MyCVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVViewController.h; sourceTree = "<group>"; };
+		0E4D0C891993375000DC70A2 /* MyCVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVViewController.m; sourceTree = "<group>"; };
+		0E4D0C921993488800DC70A2 /* UIColor+customProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+customProperties.h"; sourceTree = "<group>"; };
+		0E4D0C931993488800DC70A2 /* UIColor+customProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+customProperties.m"; sourceTree = "<group>"; };
+		0E4D0C9619934F1000DC70A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0E6832C919C1572E00C6E608 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		0E6CF4EA19A69B3F00340707 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0E6DFDF219BE979A0029BFA5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		0E6F9EC619AF74A000B681CE /* UserAdditionalSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAdditionalSection.h; sourceTree = "<group>"; };
+		0E6F9EC719AF74A000B681CE /* UserAdditionalSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAdditionalSection.m; sourceTree = "<group>"; };
+		0E6F9EC919AF752300B681CE /* MyCVSections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVSections.h; sourceTree = "<group>"; };
+		0E6F9ECC19AF8A7A00B681CE /* MyCVConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVConfirmationViewController.h; sourceTree = "<group>"; };
+		0E6F9ECD19AF8A7A00B681CE /* MyCVConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVConfirmationViewController.m; sourceTree = "<group>"; };
+		0E7FDE0619AD45AE003BD997 /* UserCareerObjective.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCareerObjective.h; sourceTree = "<group>"; };
+		0E7FDE0719AD45AE003BD997 /* UserCareerObjective.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCareerObjective.m; sourceTree = "<group>"; };
+		0E7FDE0919AD45AE003BD997 /* UserWorkingHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserWorkingHistory.h; sourceTree = "<group>"; };
+		0E7FDE0A19AD45AE003BD997 /* UserWorkingHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserWorkingHistory.m; sourceTree = "<group>"; };
+		0E95F36819A9BD92002B4B82 /* MyCVPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVPickerViewController.h; sourceTree = "<group>"; };
+		0E95F36919A9BD92002B4B82 /* MyCVPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVPickerViewController.m; sourceTree = "<group>"; };
+		0E95F36A19A9BD92002B4B82 /* MyCVPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCVPickerViewController.xib; sourceTree = "<group>"; };
+		0E95F36D19A9C208002B4B82 /* MyCVEducationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVEducationViewController.h; sourceTree = "<group>"; };
+		0E95F36E19A9C208002B4B82 /* MyCVEducationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVEducationViewController.m; sourceTree = "<group>"; };
+		0E95F37019A9C430002B4B82 /* UserEducation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEducation.h; sourceTree = "<group>"; };
+		0E95F37119A9C430002B4B82 /* UserEducation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEducation.m; sourceTree = "<group>"; };
+		0EA0C71F199EB858005FEE9F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		0EA0C724199EC07E005FEE9F /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		0EA0C725199EC07E005FEE9F /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		0EA3927B19A27B9300DD0317 /* MyCVBasicInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVBasicInfoViewController.h; sourceTree = "<group>"; };
+		0EA3927C19A27B9300DD0317 /* MyCVBasicInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVBasicInfoViewController.m; sourceTree = "<group>"; };
+		0EA6559819ACE6AC00D1FF5D /* MyCVEducationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVEducationDetailsViewController.h; sourceTree = "<group>"; };
+		0EA6559919ACE6AC00D1FF5D /* MyCVEducationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVEducationDetailsViewController.m; sourceTree = "<group>"; };
+		0EA6559C19AD2D5C00D1FF5D /* MyCVWorkingHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVWorkingHistoryViewController.h; sourceTree = "<group>"; };
+		0EA6559D19AD2D5C00D1FF5D /* MyCVWorkingHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVWorkingHistoryViewController.m; sourceTree = "<group>"; };
+		0EA6559F19AD3C6C00D1FF5D /* MyCVCareerObjectiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVCareerObjectiveViewController.h; sourceTree = "<group>"; };
+		0EA655A019AD3C6C00D1FF5D /* MyCVCareerObjectiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVCareerObjectiveViewController.m; sourceTree = "<group>"; };
+		0EAAF17019A07E8900D8F715 /* MyCVBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVBaseViewController.h; sourceTree = "<group>"; };
+		0EAAF17119A07E8900D8F715 /* MyCVBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVBaseViewController.m; sourceTree = "<group>"; };
+		0EB7FC1619A3F723009AE696 /* MyCVCustomDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVCustomDatePickerViewController.h; sourceTree = "<group>"; };
+		0EB7FC1719A3F723009AE696 /* MyCVCustomDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVCustomDatePickerViewController.m; sourceTree = "<group>"; };
+		0EB7FC1819A3F723009AE696 /* MyCVCustomDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCVCustomDatePickerViewController.xib; sourceTree = "<group>"; };
+		0EBA972F19BE352200F82780 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-6.11.1/libGoogleAdMobAds.a"; sourceTree = "<group>"; };
+		0EBA973119BE3B4D00F82780 /* MyCVComingFeaturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVComingFeaturesViewController.h; sourceTree = "<group>"; };
+		0EBA973219BE3B4D00F82780 /* MyCVComingFeaturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVComingFeaturesViewController.m; sourceTree = "<group>"; };
+		0EBA973519BE40E000F82780 /* MyCVInterstitialAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVInterstitialAppDelegate.h; sourceTree = "<group>"; };
+		0EBA973619BE40E000F82780 /* MyCVInterstitialAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVInterstitialAppDelegate.m; sourceTree = "<group>"; };
+		0EBA973919BE4A2200F82780 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0EBA973A19BE4A2200F82780 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0EBA973E19BE4A5400F82780 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		0EC523ED199DA6D7002510A2 /* UIImage+customProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+customProperties.h"; sourceTree = "<group>"; };
+		0EC523EE199DA6D7002510A2 /* UIImage+customProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+customProperties.m"; sourceTree = "<group>"; };
+		17516E074E974A2EA16275F3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		65CBCCDC84574E5081D578EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +190,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E05E8A819CA04BF008BB417 /* AVFoundation.framework in Frameworks */,
+				0E6832CA19C1572E00C6E608 /* iAd.framework in Frameworks */,
+				0E6DFDF319BE979A0029BFA5 /* CoreText.framework in Frameworks */,
+				0EBA973019BE352200F82780 /* libGoogleAdMobAds.a in Frameworks */,
+				0E6CF4EB19A69B3F00340707 /* CoreLocation.framework in Frameworks */,
+				0E4D0C9719934F1000DC70A2 /* QuartzCore.framework in Frameworks */,
 				0E4D0C4F1991E94F00DC70A2 /* CoreGraphics.framework in Frameworks */,
 				0E4D0C511991E94F00DC70A2 /* UIKit.framework in Frameworks */,
 				0E4D0C4D1991E94F00DC70A2 /* Foundation.framework in Frameworks */,
+				F76BB987BF4E4F2EA51A3B59 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +223,7 @@
 				0E4D0C741991E94F00DC70A2 /* MyCVTests */,
 				0E4D0C4B1991E94F00DC70A2 /* Frameworks */,
 				0E4D0C4A1991E94F00DC70A2 /* Products */,
+				17516E074E974A2EA16275F3 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,10 +239,17 @@
 		0E4D0C4B1991E94F00DC70A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E05E8A719CA04BF008BB417 /* AVFoundation.framework */,
+				0E6832C919C1572E00C6E608 /* iAd.framework */,
+				0E6DFDF219BE979A0029BFA5 /* CoreText.framework */,
+				0EBA972F19BE352200F82780 /* libGoogleAdMobAds.a */,
+				0E6CF4EA19A69B3F00340707 /* CoreLocation.framework */,
+				0E4D0C9619934F1000DC70A2 /* QuartzCore.framework */,
 				0E4D0C4C1991E94F00DC70A2 /* Foundation.framework */,
 				0E4D0C4E1991E94F00DC70A2 /* CoreGraphics.framework */,
 				0E4D0C501991E94F00DC70A2 /* UIKit.framework */,
 				0E4D0C6E1991E94F00DC70A2 /* XCTest.framework */,
+				65CBCCDC84574E5081D578EF /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,12 +257,29 @@
 		0E4D0C521991E94F00DC70A2 /* MyCV */ = {
 			isa = PBXGroup;
 			children = (
+				0EBA973E19BE4A5400F82780 /* Default.png */,
+				0EBA973919BE4A2200F82780 /* Default-568h@2x.png */,
+				0EBA973A19BE4A2200F82780 /* Default@2x.png */,
+				0EBA973419BE40BF00F82780 /* Custom Delegates */,
+				0EB7FC1519A3F6F4009AE696 /* Custom Controllers */,
+				0EAAF16F19A07E6700D8F715 /* Base Controllers */,
+				0EA0C71D199EB83C005FEE9F /* CoreData */,
+				0EC523EC199DA65B002510A2 /* Tools */,
+				0E4D0C951993488C00DC70A2 /* Categories */,
+				0E4D0C871993372400DC70A2 /* Menu */,
 				0E4D0C5B1991E94F00DC70A2 /* MyCVAppDelegate.h */,
 				0E4D0C5C1991E94F00DC70A2 /* MyCVAppDelegate.m */,
 				0E4D0C5E1991E94F00DC70A2 /* Main_iPhone.storyboard */,
 				0E4D0C611991E94F00DC70A2 /* Main_iPad.storyboard */,
-				0E4D0C641991E94F00DC70A2 /* MyCVViewController.h */,
-				0E4D0C651991E94F00DC70A2 /* MyCVViewController.m */,
+				0E4D0C881993375000DC70A2 /* MyCVViewController.h */,
+				0E4D0C891993375000DC70A2 /* MyCVViewController.m */,
+				0E447ECC199B39F30021E775 /* MyCVLandingViewController.h */,
+				0E447ECD199B39F30021E775 /* MyCVLandingViewController.m */,
+				0E4D0C841991EDDE00DC70A2 /* MyCVHomeControllerViewController.h */,
+				0E4D0C851991EDDE00DC70A2 /* MyCVHomeControllerViewController.m */,
+				0EBA973119BE3B4D00F82780 /* MyCVComingFeaturesViewController.h */,
+				0EBA973219BE3B4D00F82780 /* MyCVComingFeaturesViewController.m */,
+				0EA6559B19ACE6B300D1FF5D /* CV sections */,
 				0E4D0C671991E94F00DC70A2 /* Images.xcassets */,
 				0E4D0C531991E94F00DC70A2 /* Supporting Files */,
 			);
@@ -155,6 +315,127 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0E4D0C871993372400DC70A2 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				0E4D0C641991E94F00DC70A2 /* MenuController.h */,
+				0E4D0C651991E94F00DC70A2 /* MenuController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		0E4D0C951993488C00DC70A2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0E4D0C921993488800DC70A2 /* UIColor+customProperties.h */,
+				0E4D0C931993488800DC70A2 /* UIColor+customProperties.m */,
+				0E447EC51999DADA0021E775 /* UILabel+customProperties.h */,
+				0E447EC61999DADA0021E775 /* UILabel+customProperties.m */,
+				0EC523ED199DA6D7002510A2 /* UIImage+customProperties.h */,
+				0EC523EE199DA6D7002510A2 /* UIImage+customProperties.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		0EA0C71D199EB83C005FEE9F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0E6F9EC919AF752300B681CE /* MyCVSections.h */,
+				0EA0C724199EC07E005FEE9F /* UserInfo.h */,
+				0EA0C725199EC07E005FEE9F /* UserInfo.m */,
+				0E95F37019A9C430002B4B82 /* UserEducation.h */,
+				0E95F37119A9C430002B4B82 /* UserEducation.m */,
+				0E7FDE0919AD45AE003BD997 /* UserWorkingHistory.h */,
+				0E7FDE0A19AD45AE003BD997 /* UserWorkingHistory.m */,
+				0E7FDE0619AD45AE003BD997 /* UserCareerObjective.h */,
+				0E7FDE0719AD45AE003BD997 /* UserCareerObjective.m */,
+				0E122DDA19AE42C0008C78C6 /* UserSkills.h */,
+				0E122DDB19AE42C0008C78C6 /* UserSkills.m */,
+				0E6F9EC619AF74A000B681CE /* UserAdditionalSection.h */,
+				0E6F9EC719AF74A000B681CE /* UserAdditionalSection.m */,
+				0EA0C71E199EB858005FEE9F /* DataModel.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		0EA6559B19ACE6B300D1FF5D /* CV sections */ = {
+			isa = PBXGroup;
+			children = (
+				0EA3927B19A27B9300DD0317 /* MyCVBasicInfoViewController.h */,
+				0EA3927C19A27B9300DD0317 /* MyCVBasicInfoViewController.m */,
+				0E95F36D19A9C208002B4B82 /* MyCVEducationViewController.h */,
+				0E95F36E19A9C208002B4B82 /* MyCVEducationViewController.m */,
+				0EA6559819ACE6AC00D1FF5D /* MyCVEducationDetailsViewController.h */,
+				0EA6559919ACE6AC00D1FF5D /* MyCVEducationDetailsViewController.m */,
+				0EA6559F19AD3C6C00D1FF5D /* MyCVCareerObjectiveViewController.h */,
+				0EA655A019AD3C6C00D1FF5D /* MyCVCareerObjectiveViewController.m */,
+				0EA6559C19AD2D5C00D1FF5D /* MyCVWorkingHistoryViewController.h */,
+				0EA6559D19AD2D5C00D1FF5D /* MyCVWorkingHistoryViewController.m */,
+				0E0A375919AE34250083F95C /* MyCVWorkingHistoryDetailsViewController.h */,
+				0E0A375A19AE34250083F95C /* MyCVWorkingHistoryDetailsViewController.m */,
+				0E0A375C19AE41CD0083F95C /* MyCVSkillsViewController.h */,
+				0E0A375D19AE41CD0083F95C /* MyCVSkillsViewController.m */,
+				0E0A375F19AE41DC0083F95C /* MyCVSkillDetailsViewController.h */,
+				0E0A376019AE41DC0083F95C /* MyCVSkillDetailsViewController.m */,
+				0E122DDD19AE71E3008C78C6 /* MyCVOtherSectionViewController.h */,
+				0E122DDE19AE71E3008C78C6 /* MyCVOtherSectionViewController.m */,
+				0E122DE019AE71EF008C78C6 /* MyCVOtherSectionDetailsViewController.h */,
+				0E122DE119AE71EF008C78C6 /* MyCVOtherSectionDetailsViewController.m */,
+				0E6F9ECC19AF8A7A00B681CE /* MyCVConfirmationViewController.h */,
+				0E6F9ECD19AF8A7A00B681CE /* MyCVConfirmationViewController.m */,
+				0E47052319BA25B000126C0A /* MyCVPDFDesignOptionsViewController.h */,
+				0E47052419BA25B000126C0A /* MyCVPDFDesignOptionsViewController.m */,
+				0E47052619BA357000126C0A /* MyCVPDFPreviewViewController.h */,
+				0E47052719BA357000126C0A /* MyCVPDFPreviewViewController.m */,
+			);
+			name = "CV sections";
+			sourceTree = "<group>";
+		};
+		0EAAF16F19A07E6700D8F715 /* Base Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0EAAF17019A07E8900D8F715 /* MyCVBaseViewController.h */,
+				0EAAF17119A07E8900D8F715 /* MyCVBaseViewController.m */,
+			);
+			name = "Base Controllers";
+			sourceTree = "<group>";
+		};
+		0EB7FC1519A3F6F4009AE696 /* Custom Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E3795BD19A3FA1D0012A62A /* MyCVPicker.h */,
+				0EB7FC1619A3F723009AE696 /* MyCVCustomDatePickerViewController.h */,
+				0EB7FC1719A3F723009AE696 /* MyCVCustomDatePickerViewController.m */,
+				0E95F36819A9BD92002B4B82 /* MyCVPickerViewController.h */,
+				0E95F36919A9BD92002B4B82 /* MyCVPickerViewController.m */,
+				0E95F36A19A9BD92002B4B82 /* MyCVPickerViewController.xib */,
+				0EB7FC1819A3F723009AE696 /* MyCVCustomDatePickerViewController.xib */,
+			);
+			name = "Custom Controllers";
+			sourceTree = "<group>";
+		};
+		0EBA973419BE40BF00F82780 /* Custom Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA973519BE40E000F82780 /* MyCVInterstitialAppDelegate.h */,
+				0EBA973619BE40E000F82780 /* MyCVInterstitialAppDelegate.m */,
+			);
+			name = "Custom Delegates";
+			sourceTree = "<group>";
+		};
+		0EC523EC199DA65B002510A2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				0E22A3EE199E6DB4006C179A /* MyCVUtilities.h */,
+				0E22A3EF199E6DB4006C179A /* MyCVUtilities.m */,
+				0E4C3F2B19B78ADF008AA310 /* PDFHelper.h */,
+				0E4C3F2C19B78ADF008AA310 /* PDFHelper.m */,
+				0E4C3F2E19B7B83B008AA310 /* MyCVPhoneFormatter.h */,
+				0E4C3F2F19B7B83B008AA310 /* MyCVPhoneFormatter.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +443,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E4D0C7E1991E94F00DC70A2 /* Build configuration list for PBXNativeTarget "MyCV" */;
 			buildPhases = (
+				201952B7197948E2AA72102B /* Check Pods Manifest.lock */,
 				0E4D0C451991E94F00DC70A2 /* Sources */,
 				0E4D0C461991E94F00DC70A2 /* Frameworks */,
 				0E4D0C471991E94F00DC70A2 /* Resources */,
+				B8FA513F0F424775853DFFEF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +486,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "SK Labs";
 				TargetAttributes = {
+					0E4D0C481991E94F00DC70A2 = {
+						DevelopmentTeam = 49VFMFM852;
+					};
 					0E4D0C6C1991E94F00DC70A2 = {
 						TestTargetID = 0E4D0C481991E94F00DC70A2;
 					};
@@ -233,9 +519,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4D0C631991E94F00DC70A2 /* Main_iPad.storyboard in Resources */,
+				0E95F36C19A9BD92002B4B82 /* MyCVPickerViewController.xib in Resources */,
 				0E4D0C681991E94F00DC70A2 /* Images.xcassets in Resources */,
+				0EBA973D19BE4A2200F82780 /* Default@2x.png in Resources */,
 				0E4D0C601991E94F00DC70A2 /* Main_iPhone.storyboard in Resources */,
+				0EBA973C19BE4A2200F82780 /* Default-568h@2x.png in Resources */,
+				0EB7FC1A19A3F723009AE696 /* MyCVCustomDatePickerViewController.xib in Resources */,
 				0E4D0C571991E94F00DC70A2 /* InfoPlist.strings in Resources */,
+				0EBA973F19BE4A5400F82780 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,14 +540,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		201952B7197948E2AA72102B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B8FA513F0F424775853DFFEF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0E4D0C451991E94F00DC70A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E4D0C661991E94F00DC70A2 /* MyCVViewController.m in Sources */,
+				0E4C3F2D19B78ADF008AA310 /* PDFHelper.m in Sources */,
+				0EA0C720199EB858005FEE9F /* DataModel.xcdatamodeld in Sources */,
+				0E95F36B19A9BD92002B4B82 /* MyCVPickerViewController.m in Sources */,
+				0E4C3F3019B7B83B008AA310 /* MyCVPhoneFormatter.m in Sources */,
+				0E447EC71999DADA0021E775 /* UILabel+customProperties.m in Sources */,
+				0E122DE219AE71EF008C78C6 /* MyCVOtherSectionDetailsViewController.m in Sources */,
+				0E95F36F19A9C208002B4B82 /* MyCVEducationViewController.m in Sources */,
+				0EA655A119AD3C6C00D1FF5D /* MyCVCareerObjectiveViewController.m in Sources */,
+				0E447ECE199B39F30021E775 /* MyCVLandingViewController.m in Sources */,
+				0E4D0C861991EDDE00DC70A2 /* MyCVHomeControllerViewController.m in Sources */,
+				0E6F9ECE19AF8A7A00B681CE /* MyCVConfirmationViewController.m in Sources */,
+				0EBA973719BE40E000F82780 /* MyCVInterstitialAppDelegate.m in Sources */,
+				0EBA973319BE3B4D00F82780 /* MyCVComingFeaturesViewController.m in Sources */,
+				0EA6559A19ACE6AC00D1FF5D /* MyCVEducationDetailsViewController.m in Sources */,
+				0EA0C726199EC07E005FEE9F /* UserInfo.m in Sources */,
+				0E7FDE0B19AD45AE003BD997 /* UserWorkingHistory.m in Sources */,
+				0E4D0C941993488800DC70A2 /* UIColor+customProperties.m in Sources */,
+				0E7FDE0819AD45AE003BD997 /* UserCareerObjective.m in Sources */,
+				0E122DDF19AE71E3008C78C6 /* MyCVOtherSectionViewController.m in Sources */,
+				0E4D0C8A1993375000DC70A2 /* MyCVViewController.m in Sources */,
+				0E0A375E19AE41CD0083F95C /* MyCVSkillsViewController.m in Sources */,
+				0E4D0C661991E94F00DC70A2 /* MenuController.m in Sources */,
+				0EB7FC1919A3F723009AE696 /* MyCVCustomDatePickerViewController.m in Sources */,
+				0E0A376119AE41DC0083F95C /* MyCVSkillDetailsViewController.m in Sources */,
+				0EAAF17219A07E8900D8F715 /* MyCVBaseViewController.m in Sources */,
 				0E4D0C591991E94F00DC70A2 /* main.m in Sources */,
+				0EA3927D19A27B9300DD0317 /* MyCVBasicInfoViewController.m in Sources */,
+				0E47052819BA357000126C0A /* MyCVPDFPreviewViewController.m in Sources */,
+				0E47052519BA25B000126C0A /* MyCVPDFDesignOptionsViewController.m in Sources */,
+				0EC523EF199DA6D7002510A2 /* UIImage+customProperties.m in Sources */,
+				0E0A375B19AE34250083F95C /* MyCVWorkingHistoryDetailsViewController.m in Sources */,
+				0E22A3F0199E6DB4006C179A /* MyCVUtilities.m in Sources */,
+				0E6F9EC819AF74A000B681CE /* UserAdditionalSection.m in Sources */,
 				0E4D0C5D1991E94F00DC70A2 /* MyCVAppDelegate.m in Sources */,
+				0EA6559E19AD2D5C00D1FF5D /* MyCVWorkingHistoryViewController.m in Sources */,
+				0E122DDC19AE42C0008C78C6 /* UserSkills.m in Sources */,
+				0E95F37219A9C430002B4B82 /* UserEducation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,26 +746,44 @@
 		};
 		0E4D0C7F1991E94F00DC70A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17516E074E974A2EA16275F3 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ernesto Sanchez Kuri (P95SHRVM8Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ernesto Sanchez Kuri (P95SHRVM8Q)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCV/MyCV-Prefix.pch";
 				INFOPLIST_FILE = "MyCV/MyCV-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-6.11.1",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cac18bf8-264e-41a0-9227-77aa6e209054";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		0E4D0C801991E94F00DC70A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17516E074E974A2EA16275F3 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ernesto Sanchez Kuri (P95SHRVM8Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ernesto Sanchez Kuri (P95SHRVM8Q)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCV/MyCV-Prefix.pch";
 				INFOPLIST_FILE = "MyCV/MyCV-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-6.11.1",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cac18bf8-264e-41a0-9227-77aa6e209054";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -471,6 +847,7 @@
 				0E4D0C801991E94F00DC70A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E4D0C811991E94F00DC70A2 /* Build configuration list for PBXNativeTarget "MyCVTests" */ = {
 			isa = XCConfigurationList;
@@ -479,8 +856,22 @@
 				0E4D0C831991E94F00DC70A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0EA0C71E199EB858005FEE9F /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0EA0C71F199EB858005FEE9F /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 0EA0C71F199EB858005FEE9F /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0E4D0C411991E94F00DC70A2 /* Project object */;
 }
