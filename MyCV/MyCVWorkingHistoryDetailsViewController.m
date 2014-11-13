@@ -31,11 +31,12 @@
 {
     [super viewDidLoad];
      [self loadUI];
+    self.title = @"Job information";
     appDelegate = (MyCVAppDelegate*)[[UIApplication sharedApplication] delegate];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.scrollView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ipadBg"]]];
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedWorkArray = [appDelegate getUserWorkingHistory];
+    self.managedObjectContext = [sharedDataHelper managedObjectContext];
+    self.fetchedWorkArray = [sharedDataHelper getInfoForItem:@"UserWorkingHistory"];
     self.savedWork = [[NSMutableArray alloc]init];
    
     monthsArray = [[NSMutableArray alloc]initWithObjects:
@@ -67,7 +68,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     
     NSFetchRequest *fetchWorkRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserWorkingHistory"];
     self.savedWork = [[managedObjectContext executeFetchRequest:fetchWorkRequest error:nil] mutableCopy];
@@ -260,7 +261,7 @@
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
+    id delegate = sharedDataHelper;
     if ([delegate performSelector:@selector(managedObjectContext)]) {
         context = [delegate managedObjectContext];
     }
@@ -269,7 +270,7 @@
 
 -(void)saveWorkingHistoryWithSuccess:(WorkingHistorySavedSuccessfully) success onError: (WorkingHistorySavedFailed) savingError
 {
-    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObjectContext *context = [sharedDataHelper managedObjectContext];
     UserWorkingHistory *work = [NSEntityDescription insertNewObjectForEntityForName:@"UserWorkingHistory" inManagedObjectContext:context];
     
     work.jobTitle       = _txtJobTitle.text;
@@ -292,7 +293,7 @@
         //self.activityIndicator.hidden = YES;
         //[self.activityIndicator stopAnimating];
     }
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"UserWorkingHistory"];
     self.savedWork = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
     success(@"userSaved");

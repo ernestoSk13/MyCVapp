@@ -41,13 +41,13 @@
 {
     [super viewDidLoad];
     appDelegate = (MyCVAppDelegate*)[[UIApplication sharedApplication] delegate];
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedInfoArray = [appDelegate getUserInfo];
-    self.fetchedEducationArray = [appDelegate getUserEducation];
-    self.fetchedObjectiveArray = [appDelegate getUserCareerObjective];
-    self.fetchedWorksArray = [appDelegate getUserWorkingHistory];
-    self.fetchedSkillsArray = [appDelegate getUserSkills];
-    self.fetchedSectionsArray = [appDelegate getUserCustomSections];
+    self.managedObjectContext = [sharedDataHelper managedObjectContext];
+    self.fetchedInfoArray = [sharedDataHelper getInfoForItem:@"UserInfo"];
+    self.fetchedEducationArray = [sharedDataHelper getInfoForItem:@"UserEducation"];
+    self.fetchedObjectiveArray = [sharedDataHelper getInfoForItem:@"UserCareerObjective"];
+    self.fetchedWorksArray = [sharedDataHelper getInfoForItem:@"UserWorkingHistory"];
+    self.fetchedSkillsArray = [sharedDataHelper getInfoForItem:@"UserSkills"];
+    self.fetchedSectionsArray = [sharedDataHelper getInfoForItem:@"UserAdditionalSection"];
     
     
     
@@ -104,7 +104,7 @@
                       _viewSkills,
                       _viewOtherSections,
                       nil];
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
    //Basic Info
     NSFetchRequest *fetchUserInfoRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserInfo"];
     self.savedBasicInfo = [[managedObjectContext executeFetchRequest:fetchUserInfoRequest error:nil] mutableCopy];

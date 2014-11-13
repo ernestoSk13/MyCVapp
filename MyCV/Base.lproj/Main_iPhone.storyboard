@@ -212,7 +212,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="Mly-25-RM2">
                                                 <rect key="frame" x="85" y="24" width="150" height="150"/>
                                             </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ernesto Sanchez Kuri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkQ-ir-7Ny">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FistName LastName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkQ-ir-7Ny">
                                                 <rect key="frame" x="56" y="182" width="209" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="kCW-jC-Gq4"/>
@@ -221,7 +221,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IT engineer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYI-BF-kV1">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Software Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYI-BF-kV1">
                                                 <rect key="frame" x="20" y="216" width="280" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="LP8-gi-1DW"/>
@@ -1590,7 +1590,6 @@
                             </scrollView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kP7-LY-pvI">
                                 <rect key="frame" x="0.0" y="12" width="320" height="44"/>
-                                <color key="barTintColor" red="0.54762267669999998" green="0.87081776489999996" blue="0.75550500300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Job information" id="8hp-6c-c0A">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="OXk-QS-TzK">
@@ -2815,16 +2814,16 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="nD8-FE-IhB"/>
+        <segue reference="nSd-cN-4qR"/>
         <segue reference="7gG-AY-bjB"/>
         <segue reference="g32-xr-tNZ"/>
-        <segue reference="60D-2b-oYn"/>
-        <segue reference="nSd-cN-4qR"/>
-        <segue reference="NEN-Nj-nuq"/>
         <segue reference="kRX-gk-w6c"/>
+        <segue reference="60D-2b-oYn"/>
+        <segue reference="NEN-Nj-nuq"/>
+        <segue reference="nD8-FE-IhB"/>
         <segue reference="0mg-Kh-DFw"/>
-        <segue reference="Z2V-6b-h2h"/>
-        <segue reference="R4g-Vk-wby"/>
+        <segue reference="OdL-ef-9Ap"/>
         <segue reference="P1j-Zy-w4j"/>
+        <segue reference="Z2V-6b-h2h"/>
     </inferredMetricsTieBreakers>
 </document>

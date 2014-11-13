@@ -24,7 +24,6 @@ typedef void (^UserSavedError)();
 @property (weak, nonatomic) IBOutlet UIButton *btnContinue;
 @property (weak, nonatomic) UIImage *originalImage;
 @property (strong, nonatomic) NSString *imageURL;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic,strong)NSArray* fetchedUserArray;
 
 

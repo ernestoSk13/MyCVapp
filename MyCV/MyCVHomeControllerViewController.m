@@ -48,8 +48,7 @@
     
     
     [_viewTransparency setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ipadBg"]]];
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedUserArray = [appDelegate getUserInfo];    
+    self.fetchedUserArray = [sharedDataHelper getInfoForItem:@"UserInfo"];
      self.menuItems = [[NSMutableArray alloc]initWithArray:@[@"Start new resumé"]];
     [self.profilePicture.layer setCornerRadius:self.profilePicture.frame.size.height / 2];
     [self.profilePicture.layer setMasksToBounds:YES];
@@ -138,7 +137,7 @@
     NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
 #endif
     [super viewWillAppear:animated];
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserInfo"];
     self.savedUser = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
       UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
@@ -194,14 +193,7 @@
     }
 }
 #pragma mark Core Data Methods
-- (NSManagedObjectContext *)managedObjectContext {
-    NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
-    if ([delegate performSelector:@selector(managedObjectContext)]) {
-        context = [delegate managedObjectContext];
-    }
-    return context;
-}
+
 
 
 
@@ -339,7 +331,7 @@
 
 -(void)resetCoreDataWithSuccess: (DatabaseClearSuccess) success
 {
-    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObjectContext *context = [sharedDataHelper managedObjectContext];
     NSArray *allEntities = @[@"UserInfo", @"UserEducation", @"UserWorkingHistory", @"UserCareerObjective", @"UserSkills", @"UserAdditionalSection"];
     for (NSString *entity in allEntities)
     {

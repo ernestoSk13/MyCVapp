@@ -28,8 +28,8 @@
 {
     [super viewDidLoad];
     appDelegate = (MyCVAppDelegate*)[[UIApplication sharedApplication] delegate];
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedSkillsArray = [appDelegate getUserWorkingHistory];
+    self.managedObjectContext = [sharedDataHelper managedObjectContext];
+    self.fetchedSkillsArray = [sharedDataHelper getInfoForItem:@"UserSkills"];
     self.savedSkillsInfo = [[NSMutableArray alloc]init];
     [_btnContinue addTarget:self action:@selector(validateData) forControlEvents:UIControlEventTouchUpInside];
     [self.btnEdit setTarget:self];
@@ -44,7 +44,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     NSFetchRequest *fetchSkillRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserSkills"];
     self.savedSkillsInfo = [[managedObjectContext executeFetchRequest:fetchSkillRequest error:nil] mutableCopy];
     
@@ -91,7 +91,7 @@
 #pragma mark Core Data Methods
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
+    id delegate = sharedDataHelper;
     if ([delegate performSelector:@selector(managedObjectContext)]) {
         context = [delegate managedObjectContext];
     }

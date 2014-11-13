@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="UserAdditionalSection" representedClassName="UserAdditionalSection" syncable="YES">
         <attribute name="sectionDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sectionName" optional="YES" attributeType="String" syncable="YES"/>
@@ -28,6 +28,7 @@
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="profilePicUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zipcode" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="UserSkills" representedClassName="UserSkills" syncable="YES">
@@ -45,11 +46,11 @@
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+        <element name="UserAdditionalSection" positionX="-54" positionY="99" width="128" height="75"/>
         <element name="UserCareerObjective" positionX="-63" positionY="81" width="128" height="60"/>
         <element name="UserEducation" positionX="-63" positionY="63" width="128" height="165"/>
-        <element name="UserInfo" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="UserInfo" positionX="-63" positionY="-18" width="128" height="225"/>
         <element name="UserSkills" positionX="-54" positionY="99" width="128" height="75"/>
         <element name="UserWorkingHistory" positionX="-54" positionY="90" width="128" height="163"/>
-        <element name="UserAdditionalSection" positionX="-54" positionY="99" width="128" height="75"/>
     </elements>
 </model>

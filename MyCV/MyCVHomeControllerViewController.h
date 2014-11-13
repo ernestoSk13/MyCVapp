@@ -38,7 +38,6 @@ typedef void (^DatabaseClearSuccess)(BOOL success);
 @property (weak, nonatomic) IBOutlet UIView *viewTransparency;
 @property (weak, nonatomic) IBOutlet UIImageView *blurredImageView;
 @property (weak, nonatomic) IBOutlet ADBannerView *bannerView;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic,strong)NSArray* fetchedUserArray;
 
 // iPad functionality

@@ -47,11 +47,14 @@
                      @"First Professional Degree",
                      @"Doctoral Degree",
                      @"Post-Doctoral Training"];
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedEducationArray = [appDelegate getUserEducation];
+    self.managedObjectContext = [sharedDataHelper managedObjectContext];
+    self.fetchedEducationArray = [sharedDataHelper getInfoForItem:@"UserEducation"];
     self.savedEducation = [[NSMutableArray alloc]init];
     [self loadUI];
-    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(resignTextfield)];
+    tap.numberOfTapsRequired = 1;
+    self.scrollView.userInteractionEnabled  = YES;
+    [_scrollView addGestureRecognizer:tap];
    
     
     monthsArray = [[NSMutableArray alloc]initWithObjects:
@@ -79,7 +82,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     
     NSFetchRequest *fetchEducationeRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserEducation"];
     self.savedEducation = [[managedObjectContext executeFetchRequest:fetchEducationeRequest error:nil] mutableCopy];
@@ -294,7 +297,7 @@
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
+    id delegate = sharedDataHelper;
     if ([delegate performSelector:@selector(managedObjectContext)]) {
         context = [delegate managedObjectContext];
     }
@@ -305,7 +308,7 @@
 {
     
     
-    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObjectContext *context = [sharedDataHelper managedObjectContext];
     UserEducation *education = [NSEntityDescription insertNewObjectForEntityForName:@"UserEducation" inManagedObjectContext:context];
     education.majorDegree   = _txtMajorName.text;
     education.schoolName    = _txtSchoolName.text;
@@ -328,7 +331,7 @@
         //self.activityIndicator.hidden = YES;
         //[self.activityIndicator stopAnimating];
     }
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"UserEducation"];
     self.savedEducation = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
     success(@"userSaved");
@@ -405,7 +408,7 @@
                              } else if(self.view.frame.size.height > 1000){
                                  [_scrollView setContentOffset:CGPointMake(0,textField.center.y -480) animated:YES];
                              }else{
-                                 [_scrollView setContentOffset:CGPointMake(0,textField.center.y -220) animated:YES];
+                                 [_scrollView setContentOffset:CGPointMake(0,textField.center.y -180) animated:YES];
                                  
                              }
                              
@@ -466,7 +469,18 @@
         
     }
 }
-
+-(void)resignTextfield
+{
+    for (UIView *scrollSubviews in _scrollView.subviews) {
+        if ([scrollSubviews isKindOfClass:[UITextField class]]) {
+            UITextField *textfield = (UITextField *)scrollSubviews;
+            if ([textfield isFirstResponder]) {
+                [textfield resignFirstResponder];
+                return;
+            }
+        }
+    }
+}
 /*
 #pragma mark - Navigation
 

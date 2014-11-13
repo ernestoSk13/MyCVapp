@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #define IPAD     UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
+
+
+
 @interface MyCVBaseViewController : UIViewController
 @property (nonatomic, strong)UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) UIView *viewBg;

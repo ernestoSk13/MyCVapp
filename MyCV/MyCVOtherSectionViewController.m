@@ -28,8 +28,8 @@
 {
     [super viewDidLoad];
     appDelegate = (MyCVAppDelegate*)[[UIApplication sharedApplication] delegate];
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedSectionsArray = [appDelegate getUserCustomSections];
+    self.managedObjectContext = [sharedDataHelper managedObjectContext];
+    self.fetchedSectionsArray = [sharedDataHelper getInfoForItem:@"UserAdditionalSection"];
     self.savedSectionInfo = [[NSMutableArray alloc]init];
     [_btnContinue addTarget:self action:@selector(validateData) forControlEvents:UIControlEventTouchUpInside];
     [self.btnEdit setTarget:self];
@@ -44,12 +44,14 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     NSFetchRequest *fetchSectionRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserAdditionalSection"];
     self.savedSectionInfo = [[managedObjectContext executeFetchRequest:fetchSectionRequest error:nil] mutableCopy];
     
     if ([self.savedSectionInfo count]>0) {
         self.hasDataStored = YES;
+    }else{
+        [self.btnEdit setEnabled:NO];
     }
     [self.tblSectionList reloadData];
 }
@@ -89,7 +91,7 @@
 #pragma mark Core Data Methods
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
+    id delegate = sharedDataHelper;
     if ([delegate performSelector:@selector(managedObjectContext)]) {
         context = [delegate managedObjectContext];
     }

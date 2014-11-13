@@ -40,6 +40,7 @@
 		0E4D0C8A1993375000DC70A2 /* MyCVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4D0C891993375000DC70A2 /* MyCVViewController.m */; };
 		0E4D0C941993488800DC70A2 /* UIColor+customProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4D0C931993488800DC70A2 /* UIColor+customProperties.m */; };
 		0E4D0C9719934F1000DC70A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4D0C9619934F1000DC70A2 /* QuartzCore.framework */; };
+		0E6554661A0A9700008E8CAD /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6554651A0A9700008E8CAD /* UserInfo.m */; };
 		0E6832CA19C1572E00C6E608 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6832C919C1572E00C6E608 /* iAd.framework */; };
 		0E6CF4EB19A69B3F00340707 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6CF4EA19A69B3F00340707 /* CoreLocation.framework */; };
 		0E6DFDF319BE979A0029BFA5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6DFDF219BE979A0029BFA5 /* CoreText.framework */; };
@@ -52,12 +53,12 @@
 		0E95F36F19A9C208002B4B82 /* MyCVEducationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95F36E19A9C208002B4B82 /* MyCVEducationViewController.m */; };
 		0E95F37219A9C430002B4B82 /* UserEducation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95F37119A9C430002B4B82 /* UserEducation.m */; };
 		0EA0C720199EB858005FEE9F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0C71E199EB858005FEE9F /* DataModel.xcdatamodeld */; };
-		0EA0C726199EC07E005FEE9F /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0C725199EC07E005FEE9F /* UserInfo.m */; };
 		0EA3927D19A27B9300DD0317 /* MyCVBasicInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3927C19A27B9300DD0317 /* MyCVBasicInfoViewController.m */; };
 		0EA6559A19ACE6AC00D1FF5D /* MyCVEducationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6559919ACE6AC00D1FF5D /* MyCVEducationDetailsViewController.m */; };
 		0EA6559E19AD2D5C00D1FF5D /* MyCVWorkingHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6559D19AD2D5C00D1FF5D /* MyCVWorkingHistoryViewController.m */; };
 		0EA655A119AD3C6C00D1FF5D /* MyCVCareerObjectiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA655A019AD3C6C00D1FF5D /* MyCVCareerObjectiveViewController.m */; };
 		0EAAF17219A07E8900D8F715 /* MyCVBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAAF17119A07E8900D8F715 /* MyCVBaseViewController.m */; };
+		0EAE4CEF1A0A89A0003F37C6 /* MyCVCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE4CEE1A0A89A0003F37C6 /* MyCVCoreDataHelper.m */; };
 		0EB7FC1919A3F723009AE696 /* MyCVCustomDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7FC1719A3F723009AE696 /* MyCVCustomDatePickerViewController.m */; };
 		0EB7FC1A19A3F723009AE696 /* MyCVCustomDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EB7FC1819A3F723009AE696 /* MyCVCustomDatePickerViewController.xib */; };
 		0EBA973019BE352200F82780 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA972F19BE352200F82780 /* libGoogleAdMobAds.a */; };
@@ -136,6 +137,8 @@
 		0E4D0C921993488800DC70A2 /* UIColor+customProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+customProperties.h"; sourceTree = "<group>"; };
 		0E4D0C931993488800DC70A2 /* UIColor+customProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+customProperties.m"; sourceTree = "<group>"; };
 		0E4D0C9619934F1000DC70A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0E6554641A0A9700008E8CAD /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		0E6554651A0A9700008E8CAD /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		0E6832C919C1572E00C6E608 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		0E6CF4EA19A69B3F00340707 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0E6DFDF219BE979A0029BFA5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -156,8 +159,6 @@
 		0E95F37019A9C430002B4B82 /* UserEducation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEducation.h; sourceTree = "<group>"; };
 		0E95F37119A9C430002B4B82 /* UserEducation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEducation.m; sourceTree = "<group>"; };
 		0EA0C71F199EB858005FEE9F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		0EA0C724199EC07E005FEE9F /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
-		0EA0C725199EC07E005FEE9F /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		0EA3927B19A27B9300DD0317 /* MyCVBasicInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVBasicInfoViewController.h; sourceTree = "<group>"; };
 		0EA3927C19A27B9300DD0317 /* MyCVBasicInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVBasicInfoViewController.m; sourceTree = "<group>"; };
 		0EA6559819ACE6AC00D1FF5D /* MyCVEducationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVEducationDetailsViewController.h; sourceTree = "<group>"; };
@@ -168,6 +169,8 @@
 		0EA655A019AD3C6C00D1FF5D /* MyCVCareerObjectiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVCareerObjectiveViewController.m; sourceTree = "<group>"; };
 		0EAAF17019A07E8900D8F715 /* MyCVBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVBaseViewController.h; sourceTree = "<group>"; };
 		0EAAF17119A07E8900D8F715 /* MyCVBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVBaseViewController.m; sourceTree = "<group>"; };
+		0EAE4CED1A0A89A0003F37C6 /* MyCVCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVCoreDataHelper.h; sourceTree = "<group>"; };
+		0EAE4CEE1A0A89A0003F37C6 /* MyCVCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVCoreDataHelper.m; sourceTree = "<group>"; };
 		0EB7FC1619A3F723009AE696 /* MyCVCustomDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVCustomDatePickerViewController.h; sourceTree = "<group>"; };
 		0EB7FC1719A3F723009AE696 /* MyCVCustomDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVCustomDatePickerViewController.m; sourceTree = "<group>"; };
 		0EB7FC1819A3F723009AE696 /* MyCVCustomDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCVCustomDatePickerViewController.xib; sourceTree = "<group>"; };
@@ -341,8 +344,8 @@
 			isa = PBXGroup;
 			children = (
 				0E6F9EC919AF752300B681CE /* MyCVSections.h */,
-				0EA0C724199EC07E005FEE9F /* UserInfo.h */,
-				0EA0C725199EC07E005FEE9F /* UserInfo.m */,
+				0E6554641A0A9700008E8CAD /* UserInfo.h */,
+				0E6554651A0A9700008E8CAD /* UserInfo.m */,
 				0E95F37019A9C430002B4B82 /* UserEducation.h */,
 				0E95F37119A9C430002B4B82 /* UserEducation.m */,
 				0E7FDE0919AD45AE003BD997 /* UserWorkingHistory.h */,
@@ -354,6 +357,8 @@
 				0E6F9EC619AF74A000B681CE /* UserAdditionalSection.h */,
 				0E6F9EC719AF74A000B681CE /* UserAdditionalSection.m */,
 				0EA0C71E199EB858005FEE9F /* DataModel.xcdatamodeld */,
+				0EAE4CED1A0A89A0003F37C6 /* MyCVCoreDataHelper.h */,
+				0EAE4CEE1A0A89A0003F37C6 /* MyCVCoreDataHelper.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -592,7 +597,6 @@
 				0EBA973719BE40E000F82780 /* MyCVInterstitialAppDelegate.m in Sources */,
 				0EBA973319BE3B4D00F82780 /* MyCVComingFeaturesViewController.m in Sources */,
 				0EA6559A19ACE6AC00D1FF5D /* MyCVEducationDetailsViewController.m in Sources */,
-				0EA0C726199EC07E005FEE9F /* UserInfo.m in Sources */,
 				0E7FDE0B19AD45AE003BD997 /* UserWorkingHistory.m in Sources */,
 				0E4D0C941993488800DC70A2 /* UIColor+customProperties.m in Sources */,
 				0E7FDE0819AD45AE003BD997 /* UserCareerObjective.m in Sources */,
@@ -603,6 +607,7 @@
 				0EB7FC1919A3F723009AE696 /* MyCVCustomDatePickerViewController.m in Sources */,
 				0E0A376119AE41DC0083F95C /* MyCVSkillDetailsViewController.m in Sources */,
 				0EAAF17219A07E8900D8F715 /* MyCVBaseViewController.m in Sources */,
+				0E6554661A0A9700008E8CAD /* UserInfo.m in Sources */,
 				0E4D0C591991E94F00DC70A2 /* main.m in Sources */,
 				0EA3927D19A27B9300DD0317 /* MyCVBasicInfoViewController.m in Sources */,
 				0E47052819BA357000126C0A /* MyCVPDFPreviewViewController.m in Sources */,
@@ -615,6 +620,7 @@
 				0EA6559E19AD2D5C00D1FF5D /* MyCVWorkingHistoryViewController.m in Sources */,
 				0E122DDC19AE42C0008C78C6 /* UserSkills.m in Sources */,
 				0E95F37219A9C430002B4B82 /* UserEducation.m in Sources */,
+				0EAE4CEF1A0A89A0003F37C6 /* MyCVCoreDataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

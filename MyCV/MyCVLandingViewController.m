@@ -14,7 +14,7 @@
 #import "UserInfo.h"
 
 @interface MyCVLandingViewController ()
-@property (strong) NSMutableArray *savedUser;
+@property (strong) UserInfo *savedUser;
 @end
 
 @implementation MyCVLandingViewController
@@ -43,32 +43,17 @@
     [self.profileImage.layer setMasksToBounds:YES];
     [self.profileImage.layer setBorderColor:[UIColor whiteColor].CGColor];
     [self.profileImage.layer setBorderWidth:4];
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedUserArray = [appDelegate getUserInfo];
+    self.fetchedUserArray = [sharedDataHelper getInfoForItem:@"UserInfo"];
 
 }
 
-#pragma mark Core Data Methods
-- (NSManagedObjectContext *)managedObjectContext {
-    NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
-    if ([delegate performSelector:@selector(managedObjectContext)]) {
-        context = [delegate managedObjectContext];
-    }
-    return context;
-}
+
 
 
 
 -(void)saveUserInfo:(UserSavedSuccess)success onError:(UserSavedError)savingError
 {
     if (self.originalImage) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *path = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithString:[NSString stringWithFormat:@"%@_%@.png", _txtLastName.text, _txtFirstName.text]]];
-        
-        
-        // let's save a file that we know
         NSURL *destination = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]URLByAppendingPathComponent:@"MyProfilePic/profile.png"];
         //[[NSFileManager defaultManager]copyItemAtURL:resource toURL:destination error:nil];
         NSString *thePath = [NSString stringWithFormat:@"%@", destination];
@@ -77,25 +62,25 @@
         NSData *data = UIImagePNGRepresentation(self.originalImage);
         self.imageURL = thePath;
         [data writeToFile:thePath atomically:YES];
+    }else{
+        self.imageURL = @"";
     }
     
-    NSManagedObjectContext *context = [self managedObjectContext];
-    UserInfo *user = [NSEntityDescription insertNewObjectForEntityForName:@"UserInfo" inManagedObjectContext:context];
-    user.firstName = _txtFirstName.text;
-    user.lastName  = _txtLastName.text;
-    user.degree    = _txtDegreeTitle.text;
-    user.profilePicUrl = self.imageURL;
-    NSError *error = nil;
-    if (![context save:&error]) {
-        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-        savingError();
-        //self.activityIndicator.hidden = YES;
-        //[self.activityIndicator stopAnimating];
-    }
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"UserInfo"];
-    self.savedUser = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
-    success(@"userSaved");
+    [sharedDataHelper setNewUser:@{@"userId"   :@"1",
+                                   @"firstName":_txtFirstName.text,
+                                   @"lastName" : _txtLastName.text,
+                                   @"degree"   :_txtDegreeTitle.text,
+                                   @"profilePicUrl" : self.imageURL
+                                   } withSuccess:^(NSString *successString) {
+                                       self.savedUser = [sharedDataHelper savedUserInfo];
+        success(@"userSaved");
+    } orError:^(NSString *errorString, NSDictionary *errorDict) {
+        savingError(errorString);
+    }];
+    
+   
+    //self.savedUser = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
+    
 }
 
 
@@ -266,7 +251,7 @@
 
 - (IBAction)continueAction:(id)sender{
     
-    if (_txtFirstName.text.length > 1 && _txtLastName.text.length > 1) {
+    if (_txtFirstName.text.length > 0 && _txtLastName.text.length > 0) {
         MyCVHomeControllerViewController *homeVC = [[MyCVUtilities sharedInstance] homeVCObject];
         [self saveUserInfo:^(NSString *userState) {
             [self dismissViewControllerAnimated:YES completion:^{

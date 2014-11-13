@@ -35,8 +35,8 @@
     self.profileImageView.image = self.profileImage;
     [_txtFirstName setText:self.firstName];
     [_txtLastName setText:self.lastName];
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedUserArray = [appDelegate getUserInfo];
+    self.managedObjectContext = [sharedDataHelper managedObjectContext];
+    self.fetchedUserArray = [sharedDataHelper getInfoForItem:@"UserInfo"];
     self.savedSelectedUser = [[NSMutableArray alloc]init];
     
     [_btnContinue addTarget:self action:@selector(validateData) forControlEvents:UIControlEventTouchUpInside];
@@ -106,7 +106,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserInfo"];
     self.savedSelectedUser = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     currentUser = [self.savedSelectedUser objectAtIndex:0];
@@ -501,9 +501,9 @@
 #pragma mark Core Data Methods
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
+    id delegate = sharedDataHelper;
     if ([delegate performSelector:@selector(managedObjectContext)]) {
-        context = [delegate managedObjectContext];
+        context = [sharedDataHelper managedObjectContext];
     }
     return context;
 }

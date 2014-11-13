@@ -15,4 +15,5 @@
     #import <Foundation/Foundation.h>
     #import "MyCVAppDelegate.h"
     #import "MyCVBaseViewController.h"
+    #import "MyCVCoreDataHelper.h"
 #endif

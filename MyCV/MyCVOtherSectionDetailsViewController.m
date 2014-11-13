@@ -30,8 +30,8 @@
     appDelegate = (MyCVAppDelegate*)[[UIApplication sharedApplication] delegate];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.scrollView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ipadBg"]]];
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedSectionsArray = [appDelegate getUserCustomSections];
+    self.managedObjectContext = [sharedDataHelper managedObjectContext];
+    self.fetchedSectionsArray = [sharedDataHelper getInfoForItem:@"UserAdditionalSection"];
     self.savedSection = [[NSMutableArray alloc]init];
     _txtSectionDescription.delegate = self;
     _txtSectionName.delegate = self;
@@ -41,7 +41,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     
     NSFetchRequest *fetchSectionRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserAdditionalSection"];
     self.savedSection = [[managedObjectContext executeFetchRequest:fetchSectionRequest error:nil] mutableCopy];
@@ -76,7 +76,7 @@
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
+    id delegate = sharedDataHelper;
     if ([delegate performSelector:@selector(managedObjectContext)]) {
         context = [delegate managedObjectContext];
     }
@@ -85,7 +85,7 @@
 
 -(void)saveSectionWithSuccess: (SectionSavedSuccessfully) success onError:(SectionSavedFailed) savingError
 {
-    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObjectContext *context = [sharedDataHelper managedObjectContext];
     
     UserAdditionalSection *section = [NSEntityDescription insertNewObjectForEntityForName:@"UserAdditionalSection" inManagedObjectContext:context];
     section.sectionName        = _txtSectionName.text;
@@ -97,7 +97,7 @@
         //self.activityIndicator.hidden = YES;
         //[self.activityIndicator stopAnimating];
     }
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"UserAdditionalSection"];
     self.savedSection = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
     success(@"userSaved");

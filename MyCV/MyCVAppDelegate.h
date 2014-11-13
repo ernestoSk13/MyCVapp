@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#define sharedDataHelper [MyCVCoreDataHelper sharedModelHelper]
 @interface MyCVAppDelegate : UIResponder <UIApplicationDelegate>
 {
     

@@ -32,8 +32,8 @@
     appDelegate = (MyCVAppDelegate*)[[UIApplication sharedApplication] delegate];
     [self.view setBackgroundColor:[UIColor whiteColor]];
      [self.scrollView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ipadBg"]]];
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedSkillArray = [appDelegate getUserSkills];
+    self.managedObjectContext = [sharedDataHelper managedObjectContext];
+    self.fetchedSkillArray = [sharedDataHelper getInfoForItem:@"UserSkills"];
     self.savedSkill = [[NSMutableArray alloc]init];
     yearsArray = @[@"1-2 years", @"3-5 years", @"6-10 years", @"10+ years"];
     _txtSkillName.delegate = self;
@@ -42,7 +42,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     
     NSFetchRequest *fetchSkillRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserSkills"];
     self.savedSkill = [[managedObjectContext executeFetchRequest:fetchSkillRequest error:nil] mutableCopy];
@@ -104,7 +104,7 @@
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
+    id delegate = sharedDataHelper;
     if ([delegate performSelector:@selector(managedObjectContext)]) {
         context = [delegate managedObjectContext];
     }
@@ -113,7 +113,7 @@
 
 -(void)saveSkillWithSuccess: (SkillSavedSuccessfully)success onError:(SkillSavedFailed) savingError
 {
-    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObjectContext *context = [sharedDataHelper managedObjectContext];
     UserSkills *skill = [NSEntityDescription insertNewObjectForEntityForName:@"UserSkills" inManagedObjectContext:context];
     skill.skillName       = _txtSkillName.text;
     skill.skillExperience = _lblExperienceYears.text;
@@ -124,7 +124,7 @@
         //self.activityIndicator.hidden = YES;
         //[self.activityIndicator stopAnimating];
     }
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"UserSkills"];
     self.savedSkill = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
     success(@"userSaved");

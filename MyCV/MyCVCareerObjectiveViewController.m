@@ -28,8 +28,8 @@
     [super viewDidLoad];
     self.savedObjectiveArray = [[NSMutableArray alloc]init];
     appDelegate = (MyCVAppDelegate*)[[UIApplication sharedApplication] delegate];
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedObjectiveArray = [appDelegate getUserCareerObjective];
+    self.managedObjectContext = [sharedDataHelper managedObjectContext];
+    self.fetchedObjectiveArray = [sharedDataHelper getInfoForItem:@"UserCareerObjective"];
     self.savedObjectiveArray = [[NSMutableArray alloc]init];
     [self loadUI];
     if (self.comesFromConfirmPage) {
@@ -47,7 +47,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserCareerObjective"];
     self.savedObjectiveArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     if ([self.savedObjectiveArray count] > 0) {
@@ -60,7 +60,7 @@
 #pragma mark - Core Data Methods
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
+    id delegate = sharedDataHelper;
     if ([delegate performSelector:@selector(managedObjectContext)]) {
         context = [delegate managedObjectContext];
     }
@@ -69,7 +69,7 @@
 
 -(void) saveObjectiveWithSuccess: (ObjectiveSavedSuccessfully) success onError: (ObjectivSavedFailed) failure
 {
-    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObjectContext *context = [sharedDataHelper managedObjectContext];
     UserCareerObjective *objective = [NSEntityDescription insertNewObjectForEntityForName:@"UserCareerObjective" inManagedObjectContext:context];
     objective.careerObjective = self.txtCareerObjective.text;
     NSError *error = nil;
@@ -77,7 +77,7 @@
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
         failure(@"failed");
     }
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"UserCareerObjective"];
     self.savedObjectiveArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
     success(@"objectiveSaved");

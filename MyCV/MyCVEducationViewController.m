@@ -43,8 +43,8 @@
                      @"First Professional Degree",
                      @"Doctoral Degree",
                      @"Post-Doctoral Training"];
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedEducationArray = [appDelegate getUserEducation];
+    self.managedObjectContext =  [sharedDataHelper managedObjectContext];
+    self.fetchedEducationArray = [sharedDataHelper getInfoForItem:@"UserEducation"];
     self.savedEducation = [[NSMutableArray alloc]init];
     [_btnContinue addTarget:self action:@selector(validateData) forControlEvents:UIControlEventTouchUpInside];
     [_btnSelectDegree.layer setBorderColor:[UIColor blackColor].CGColor];
@@ -64,7 +64,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [sharedDataHelper managedObjectContext];
     highestDegree = [[NSUserDefaults standardUserDefaults]objectForKey:@"highestDegree"];
     if (highestDegree.length < 1) {
        _degreeLabel.text = @"Select a degree";
@@ -275,7 +275,7 @@
 #pragma mark Core Data Methods
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
+    id delegate =sharedDataHelper;
     if ([delegate performSelector:@selector(managedObjectContext)]) {
         context = [delegate managedObjectContext];
     }
