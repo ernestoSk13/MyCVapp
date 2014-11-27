@@ -54,14 +54,12 @@
 -(void)saveUserInfo:(UserSavedSuccess)success onError:(UserSavedError)savingError
 {
     if (self.originalImage) {
-        NSURL *destination = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]URLByAppendingPathComponent:@"MyProfilePic/profile.png"];
-        //[[NSFileManager defaultManager]copyItemAtURL:resource toURL:destination error:nil];
-        NSString *thePath = [NSString stringWithFormat:@"%@", destination];
-        
-        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *path = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithString:[NSString stringWithFormat:@"%@_%@.png", _txtLastName.text, _txtFirstName.text]]];
         NSData *data = UIImagePNGRepresentation(self.originalImage);
-        self.imageURL = thePath;
-        [data writeToFile:thePath atomically:YES];
+        self.imageURL = path;
+        [data writeToFile:path atomically:YES];
     }else{
         self.imageURL = @"";
     }
