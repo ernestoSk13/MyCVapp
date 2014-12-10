@@ -10,7 +10,6 @@
 #import "MyCVSections.h"
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMessageComposeViewController.h>
-#import "GADInterstitial.h"
 
 
 
@@ -31,7 +30,7 @@ typedef NS_ENUM(NSInteger, completionStatus) {
    sectionNotStarted
 };
 
-@interface MyCVConfirmationViewController : MyCVBaseViewController<MFMailComposeViewControllerDelegate, UIActionSheetDelegate, GADInterstitialDelegate>
+@interface MyCVConfirmationViewController : MyCVBaseViewController<MFMailComposeViewControllerDelegate, UIActionSheetDelegate>
 {
     BOOL isComplete;
     BOOL isStarted;
@@ -44,11 +43,6 @@ typedef NS_ENUM(NSInteger, completionStatus) {
     UserAdditionalSection *currentSections;
     UserCareerObjective *currentObjective;
     NSMutableData *generatedFile;
-    //Google Ads
-    GADInterstitial *interstitial_;
-    
-    
-    
 }
 
 @property (weak, nonatomic) IBOutlet UIView *viewBasicInfo;

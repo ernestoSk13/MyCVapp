@@ -61,14 +61,12 @@
 		0EAE4CEF1A0A89A0003F37C6 /* MyCVCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE4CEE1A0A89A0003F37C6 /* MyCVCoreDataHelper.m */; };
 		0EB7FC1919A3F723009AE696 /* MyCVCustomDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7FC1719A3F723009AE696 /* MyCVCustomDatePickerViewController.m */; };
 		0EB7FC1A19A3F723009AE696 /* MyCVCustomDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EB7FC1819A3F723009AE696 /* MyCVCustomDatePickerViewController.xib */; };
-		0EBA973019BE352200F82780 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA972F19BE352200F82780 /* libGoogleAdMobAds.a */; };
 		0EBA973319BE3B4D00F82780 /* MyCVComingFeaturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA973219BE3B4D00F82780 /* MyCVComingFeaturesViewController.m */; };
 		0EBA973719BE40E000F82780 /* MyCVInterstitialAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA973619BE40E000F82780 /* MyCVInterstitialAppDelegate.m */; };
 		0EBA973C19BE4A2200F82780 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA973919BE4A2200F82780 /* Default-568h@2x.png */; };
 		0EBA973D19BE4A2200F82780 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA973A19BE4A2200F82780 /* Default@2x.png */; };
 		0EBA973F19BE4A5400F82780 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA973E19BE4A5400F82780 /* Default.png */; };
 		0EC523EF199DA6D7002510A2 /* UIImage+customProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC523EE199DA6D7002510A2 /* UIImage+customProperties.m */; };
-		F76BB987BF4E4F2EA51A3B59 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65CBCCDC84574E5081D578EF /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,7 +172,6 @@
 		0EB7FC1619A3F723009AE696 /* MyCVCustomDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVCustomDatePickerViewController.h; sourceTree = "<group>"; };
 		0EB7FC1719A3F723009AE696 /* MyCVCustomDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVCustomDatePickerViewController.m; sourceTree = "<group>"; };
 		0EB7FC1819A3F723009AE696 /* MyCVCustomDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCVCustomDatePickerViewController.xib; sourceTree = "<group>"; };
-		0EBA972F19BE352200F82780 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-6.11.1/libGoogleAdMobAds.a"; sourceTree = "<group>"; };
 		0EBA973119BE3B4D00F82780 /* MyCVComingFeaturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVComingFeaturesViewController.h; sourceTree = "<group>"; };
 		0EBA973219BE3B4D00F82780 /* MyCVComingFeaturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCVComingFeaturesViewController.m; sourceTree = "<group>"; };
 		0EBA973519BE40E000F82780 /* MyCVInterstitialAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCVInterstitialAppDelegate.h; sourceTree = "<group>"; };
@@ -196,13 +193,11 @@
 				0E05E8A819CA04BF008BB417 /* AVFoundation.framework in Frameworks */,
 				0E6832CA19C1572E00C6E608 /* iAd.framework in Frameworks */,
 				0E6DFDF319BE979A0029BFA5 /* CoreText.framework in Frameworks */,
-				0EBA973019BE352200F82780 /* libGoogleAdMobAds.a in Frameworks */,
 				0E6CF4EB19A69B3F00340707 /* CoreLocation.framework in Frameworks */,
 				0E4D0C9719934F1000DC70A2 /* QuartzCore.framework in Frameworks */,
 				0E4D0C4F1991E94F00DC70A2 /* CoreGraphics.framework in Frameworks */,
 				0E4D0C511991E94F00DC70A2 /* UIKit.framework in Frameworks */,
 				0E4D0C4D1991E94F00DC70A2 /* Foundation.framework in Frameworks */,
-				F76BB987BF4E4F2EA51A3B59 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +240,6 @@
 				0E05E8A719CA04BF008BB417 /* AVFoundation.framework */,
 				0E6832C919C1572E00C6E608 /* iAd.framework */,
 				0E6DFDF219BE979A0029BFA5 /* CoreText.framework */,
-				0EBA972F19BE352200F82780 /* libGoogleAdMobAds.a */,
 				0E6CF4EA19A69B3F00340707 /* CoreLocation.framework */,
 				0E4D0C9619934F1000DC70A2 /* QuartzCore.framework */,
 				0E4D0C4C1991E94F00DC70A2 /* Foundation.framework */,

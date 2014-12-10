@@ -13,8 +13,6 @@
 #import "UIImage+customProperties.h"
 #import "UserInfo.h"
 #import "MyCVBasicInfoViewController.h"
-#import "GADBannerView.h"
-#import "GADRequest.h"
 #import "MyCVSections.h"
 
 @interface MyCVHomeControllerViewController ()

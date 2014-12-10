@@ -7,8 +7,7 @@
 //
 
 #import "MyCVComingFeaturesViewController.h"
-#import "GADBannerView.h"
-#import "GADRequest.h"
+
 
 @interface MyCVComingFeaturesViewController ()
 

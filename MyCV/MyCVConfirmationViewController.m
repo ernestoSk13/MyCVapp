@@ -145,7 +145,6 @@
             }
         }
     }
-    interstitial_.delegate = nil;
 }
 
 -(void)checkSectionStatus
@@ -490,18 +489,6 @@
 {
     //Add an alert in case of failure
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-#pragma mark GADInterstitialDelegate implementation
-
-- (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial {
-    [self showLoadingIndicator];
-    [interstitial_ presentFromRootViewController:self];
-    //self.showInterstitialButton.enabled = YES;
-    
-}
-- (void)interstitial:(GADInterstitial *)interstitial didFailToReceiveAdWithError:(GADRequestError *)error
-{
-    NSLog(@"%@", error);
 }
 
 
