@@ -958,9 +958,22 @@
                                                              options:NSStringDrawingUsesLineFragmentOrigin
                                                              context:nil];
             CGSize fontTextSize = rectSchool.size;
-            sectionLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, currentRect.origin.y + 60,
-                                                                    fontTextSize.width, fontTextSize.height)];
-            containerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 60, self.size.height)];
+            if (currentRect.origin.y > 680) {
+                currentRect.origin.y = 124;
+                currentRect.origin.x =self.size.width/2 + 80;
+                sectionLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.size.width/2, currentRect.origin.y + 60,
+                                                                        fontTextSize.width, fontTextSize.height)];
+                containerView = [[UIView alloc]initWithFrame:CGRectMake(currentRect.origin.y + 60, currentRect.origin.x, 60, self.size.height)];
+                
+            }else{
+                sectionLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, currentRect.origin.y + 60,
+                                                                        fontTextSize.width, fontTextSize.height)];
+                containerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 60, self.size.height)];
+            }
+            
+            
+           
+            
             //[containerView setBackgroundColor:[UIColor yellowColor]];
             [containerView addSubview:sectionLabel];
             [containerView setBackgroundColor:[UIColor clearColor]];
@@ -969,6 +982,8 @@
             [sectionLabel setTextColor:[UIColor darkGrayColor]];
             [sectionLabel setText:sectionTitle];
             [sectionLabel setTransform:CGAffineTransformMakeRotation(-M_PI / 2)];
+        
+        
         }
         float firstOrigin = currentRect.origin.y + 20;
         UIFont *font = [UIFont fontWithName:@"HelveticaNeue" size:14];
@@ -994,8 +1009,10 @@
          {
          NSFontAttributeName: infoFont
          }];
-        CGRect rectSchool = [attributedText boundingRectWithSize:(CGSize){(self.size.width / 3), CGFLOAT_MAX}
-                                                         options:NSStringDrawingUsesLineFragmentOrigin
+        
+        
+        CGRect rectSchool = [attributedText boundingRectWithSize:(CGSize){(self.size.width / 3), 1000}
+                                                         options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)
                                                          context:nil];
         CGSize fontTextSize = rectSchool.size;
         if (designNumber == 1) {
@@ -1006,9 +1023,11 @@
         }else if (designNumber == 2){
             currentRect.origin.y += currentRect.size.height + 5;
             sideBarRect = currentRect;
+            currentRect.size.height = fontTextSize.height + 10;
         }else if (designNumber == 3)
         {
             currentRect.origin.y = firstOrigin + 10;
+            
         }
         
         NSMutableParagraphStyle *infoStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
@@ -1019,7 +1038,14 @@
         
         [sectionDescription drawWithRect:currentRect options:NSStringDrawingUsesLineFragmentOrigin attributes:att2 context:contextSchool];
         if (designNumber == 3) {
-            UIView *sectionSeparator = [[UIView alloc]initWithFrame:CGRectMake(containerView.frame.size.width - 2, firstOrigin, 1, currentRect.origin.y + currentRect.size.height - firstOrigin)];
+            UIView *sectionSeparator;
+            if (currentRect.origin.x > 100) {
+                sectionSeparator = [[UIView alloc]initWithFrame:CGRectMake(containerView.frame.size.width - 2, firstOrigin, 1, currentRect.origin.y + currentRect.size.height - firstOrigin)];
+            }else{
+                sectionSeparator = [[UIView alloc]initWithFrame:CGRectMake(containerView.frame.size.width - 2, firstOrigin, 1, currentRect.origin.y + currentRect.size.height - firstOrigin)];
+            }
+            
+            
             if (sectionLabel.frame.size.height > sectionSeparator.frame.size.height) {
                 [sectionSeparator setFrame:CGRectMake(containerView.frame.size.width - 2, firstOrigin, 1, sectionLabel.frame.size.height + 10)];
             }
@@ -1028,6 +1054,9 @@
             [containerView.layer renderInContext:currentContext];
             currentRect.origin.y = sectionSeparator.frame.origin.y + sectionSeparator.frame.size.height;
             currentRect.size.height = sectionSeparator.frame.size.height;
+        }
+        if (designNumber == 2) {
+            sideBarRect.origin.y += currentRect.size.height - 20;
         }
     }
 }
